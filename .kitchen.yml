@@ -1,0 +1,33 @@
+---
+driver:
+  name: vagrant
+  gui: true
+#  box: demovm_ubuntu-1404.box
+#  box_url: file:///home/awim/Documents/sandbox/demovm_ubuntu-1404.box
+  customize:
+    name: oracle_sandbox_cucumber
+    memory: 4096
+#  ssh:
+#    username: ciboodle
+#    password: kelso2012
+#    sudo_command: echo kelso2012 | sudo -E -H -S %c
+
+provisioner:
+  name: chef_zero
+
+# Uncomment the following verifier to leverage Inspec instead of Busser (the
+# default verifier)
+# verifier:
+#   name: inspec
+
+platforms:
+  - name: ubuntu-14.04
+#  - name: centos-7.1
+
+suites:
+  - name: default
+    run_list:
+      - recipe[oraclexe::default]
+#      - recipe[oraclexe::configure]
+#      - recipe[oraclexe::mount_run_shm]
+    attributes:

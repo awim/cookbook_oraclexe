@@ -1,0 +1,7 @@
+name 'oraclexe'
+maintainer 'DEMO Team Member'
+maintainer_email 'demo-team-all@verint.com'
+license 'all_rights'
+description 'Installs/Configures oraclexe_wrapper'
+long_description 'Installs/Configures oraclexe_wrapper'
+version '0.1.0'
